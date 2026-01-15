@@ -1,17 +1,4 @@
-/* ==========================================
-   Portfolio JavaScript
-   Using patterns from Web Technologies F2025:
-   - DOM Selectors (getElementById, querySelector, querySelectorAll)
-   - Event Listeners (click, scroll, mouseover)
-   - Arrow functions
-   ========================================== */
-
-// Wait for DOM to load
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // ==========================================
-    // 1. Navbar Scroll Effect (Using getElementById)
-    // ==========================================
     const navbar = document.getElementById('navbar');
     
     window.addEventListener('scroll', () => {
@@ -22,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // ==========================================
-    // 2. Smooth Scrolling (Using querySelectorAll)
-    // ==========================================
     const navLinks = document.querySelectorAll('nav ul li a');
     
     navLinks.forEach((link) => {
@@ -46,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ==========================================
-    // 3. Skill Bar Animation (Using querySelectorAll + data attributes)
-    // ==========================================
     const skillProgressBars = document.querySelectorAll('.skill-progress');
     
     const animateSkills = () => {
@@ -58,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Intersection Observer for skill bar animation
     const skillsSection = document.getElementById('skills');
     
     const skillsObserver = new IntersectionObserver((entries) => {
@@ -74,9 +54,6 @@ document.addEventListener('DOMContentLoaded', () => {
         skillsObserver.observe(skillsSection);
     }
 
-    // ==========================================
-    // 4. Project Cards Hover Effect (Using getElementsByClassName concept)
-    // ==========================================
     const projectCards = document.querySelectorAll('.project-card');
     
     projectCards.forEach((card) => {
@@ -85,9 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ==========================================
-    // 5. Active Navigation Highlighting on Scroll
-    // ==========================================
     const sections = document.querySelectorAll('section[id]');
     
     const highlightNav = () => {
@@ -111,9 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', highlightNav);
 
-    // ==========================================
-    // 6. Console log for demonstration
-    // ==========================================
     console.log('Portfolio website loaded successfully!');
     console.log('Student: Muhammad Usman Butt');
     console.log('ID: F2022266141');
